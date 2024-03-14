@@ -156,6 +156,31 @@ db.jeopardy.aggregate(
 
 д) CREATE - запрос
 
+```SQL
+db.jeopardy.insertMany([
+    {
+        'Air Date': '2004-12-31',
+        Round: 'Jeopardy!',
+        Category: 'Legend',
+        Value: 10000,
+        Question: '?',
+        Answer: '-'
+    },
+    {
+        'Air Date': '2004-12-31',
+        Round: 'Jeopardy!',
+        Category: 'Trash',
+        Value: 0,
+        Question: 'What?',
+        Answer: 'Nothing'
+    }
+])
+```
+
+В результате в коллекцию добавятся 2 записи
+
+![](images/ris9.png)
+
 ### 5. Создание курсора. Сравнение времени работы.
 
 Сначала выполним указанный выше SELECT-запрос без создания индекса и замерим время: получаем 185 миллисек
